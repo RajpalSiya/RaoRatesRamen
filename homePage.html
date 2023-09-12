@@ -4,11 +4,8 @@
 
     <meta charset="UTF-8">
     <!-- BootStrap CDN --> 
-    
-    <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
-    rel="stylesheet">
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   
     <!-- CSS elements -->
     <link rel="stylesheet" href="homePage.css" />
 
@@ -26,21 +23,55 @@
 
     </header>
 
-    <nav>
+    <div class="padding-small"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
       <div class="container-fluid">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href = "homePage.html">Home</a>
+            <a class="nav-link active" href="homePage.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" hreft = ""></a>
+            <a class="nav-link" href="aboutPage.html">About</a>
           </li>
-
+          <li class="nav-item">
+            <a class="nav-link" href="reviewsPage.hmtl">Ratings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="blogPage.html">Blog</a>
+          </li>
         </ul>
+      </div>
+    </nav>
+
+    <!--Nav Bar Padding-->
+    <div class="padding"></div>
+
+    <!-- Welcome Message + Photo-->
+    <div class="row">
+      <div class="col-sm-8"> 
+        <h2 id="welcome-message">Welcome to the wonderous world of Vegetarian Ramen across the US!</h2>
+
+        <p>
+          <a href="aboutPage.html" id="about-link-top-page"> 
+            
+            <b><u>Visit About!</u></b>
+          </a>
+        </p>
 
       </div>
+      <div class="col-sm-4"> 
+        <img id="sriram-photo" class="img-fluid" src="sriram.jpg" alt="Sriram Rao">
+      </div>
+    </div>
 
-    </nav>
+    <div class="padding"></div>
+
+    <div class="review-divider">
+      <h2>Recent Reviews</h2>
+
+    </div>
 
   </body>
 

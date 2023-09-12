@@ -30,3 +30,46 @@ h1 {
     margin: 0 auto;
     border-radius: 8px;
 }
+
+.padding {
+    padding-bottom: 25px;
+}
+
+.col-sm-8 {
+    text-align: center;
+}
+
+#sriram-photo {
+    display: inline;
+    width: 400px;
+    height: 400px;
+}
+
+#about-link-top-page {
+    color: black;
+    font-size: 20px;
+
+}
+#welcome-message {
+    font-size: 70px;
+    padding-bottom: 25px;
+}
+
+.reviews-divider {
+    background-color: #ddbea9;
+
+    padding: 20px;
+    
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 8px;
+    border-color: #9e2a2b;
+
+    text-align: center;
+
+}
+
+.padding-small {
+    padding: 2px;
+}
+
