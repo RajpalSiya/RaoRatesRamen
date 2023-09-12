@@ -1,0 +1,31 @@
+  
+header {
+    background-color: #ddbea9;
+
+    color: black;
+
+    text-align: center;
+}
+
+h1 {
+    color: white;
+}
+
+.header-content {
+    height: 75px;
+}
+
+.header-text-container {
+    background-color: #9e2a2b;
+
+
+    
+    position: relative;
+    width: 30%;
+    top: 13px;
+
+
+    max-width: fit-content;
+    margin: 0 auto;
+    border-radius: 8px;
+}
