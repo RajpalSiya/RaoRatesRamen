@@ -73,3 +73,12 @@ h1 {
     padding: 2px;
 }
 
+#ramen-1 {
+    display: inline;
+    width: 150px;
+    height: 200px;
+}
+
+.col-sm-2 {
+    text-align: center;
+}
