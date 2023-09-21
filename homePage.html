@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <!-- BootStrap CDN --> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
     <!-- CSS elements -->
     <link rel="stylesheet" href="homePage.css" />
 
@@ -33,10 +36,10 @@
             <a class="nav-link active" href="homePage.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="aboutPage.html">About</a>
+            <a class="nav-link disabled" href="aboutPage.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="reviewsPage.hmtl">Ratings</a>
+            <a class="nav-link disabled" href="reviewsPage.hmtl">Ratings</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="blogPage.html">Blog</a>
@@ -75,63 +78,60 @@
 
     <div class="padding"></div>
 
-    <div class="row">
-      <div class="col-sm-2">
-        <button id="openModalButton1">
-          <i>Click to Expand</i>
-          <img id="ramen-1" class="img-fluid rounded mxauto" src="Ramen-1.jpeg" alt="Jinya Ramen">
-          <p>
-            <u><b>Name:</b></u> Ramen 1
-          </p>
-          <p>
-            <u><b>Location:</b></u> Ramenlandia
-          </p>
-          <p>
-            <u><b>Rating:</b></u> &#127836 &#127836 &#127836 &#127836
-          </p>
-          <p>
-            <u><b>Spice Level:</b></u> &#127798 &#127798
-          </p>
-        </button>
-      </div>
-      <div class="col-sm-2">
-        <button id="openModalButton2">
-
-          <i>Click to exapand 2</i>
-        </button>
-      </div>
-     </div>
-
-     
-    <div class="padding"></div>
-
-
-    <div class="modal" id="card-review">
-      <div class="modal-content">
-        <span class="close" id="closeModal">&times;</span>
-        <h2>Ramen 1</h2>
-        <img id="ramen-1" class="img-fluid rounded mxauto" src="Ramen-1.jpeg" alt="Jinya Ramen">
-        <p>
-          <u><b>Location:</b></u> Ramenlandia
-          
-          <u><b>Rating:</b></u> &#127836 &#127836 &#127836 &#127836
-         
-          <u><b>Spice Level:</b></u> &#127798 &#127798
-        </p>
-      </div>
-    </div>
-
-    <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-      <div class="modal-content">
-        Hello this is in the Modal!
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+    <!--The Recent Reviews -->
+    <div class="row" id="ratings-row">
+      <div class="col-md-12 d-flex justify-content-center align-items-center">
+        <button id="review-button-1" onclick="openCustomModal()">
+          <div class="row" >
+            <div class="col-sm-6">
+              <i><h3>Click to Expand</h3></i>
+              <img id="jinya-1" class="img-fluid rounded mxauto" src="Jinya-review-1.jpg" alt="Jinya Ramen">
+            </div>
+            <div class="col-sm-6">
+              <p>
+                <u class="ramen-labels">Name:</u>  <p class="ramen-content">Jinya Ramen Bar - Vegan Red Fire Opal</p>
+                <u class="ramen-labels">Location:</u>  <p class="ramen-content">Denver, CO + Other</p>
+                <p class ="rating"><u> Rating:</u> &#127836 &#127836 &#127836 &#127836 &#127836</p>
+              </p>
+          </div>
+        </div>
         </button>
       </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div class="modal fade" id="review-modal-1" tabindex="-1" role="dialog" aria-labelledby="review-modal-label-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document"> 
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="review-modal-1">Jinya Ramen Bar - Vegan Red Fire Opal</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <img id="jinya-1" class="img-fluid rounded mxauto" src="Jinya-review-1.jpg" alt="Jinya Ramen">
+                <i>The Vegan Red Fire Opal Ramen without cilantro</i>
+              </div>
+              <div class="col-sm-6">
+                <p>
+                  <u class="ramen-labels">Name:</u>  <p class="ramen-content">Jinya Ramen Bar - Vegan Red Fire Opal</p>
+                  <u class="ramen-labels">Location:</u>  <p class="ramen-content">Denver, CO + Other</p>
+                  <p class ="rating"><u> Rating:</u> &#127836 &#127836 &#127836 &#127836 &#127836</p>
+                </p>
+              </div>
+            </div>
+            <div class="padding"></div>
+            <p>This is more bright and refreshing than you would expect from a bowl of ramen. It's a dish that definitely understands the time-tested cooking mantra of salt, fat, acid and heat. Tangy lemon cuts through the otherwise savory and spicy broth. The mushrooms have their signature umami taste, but have been marinated in something sweet, making for a delightful combination. But don’t worry, the sweetness is super subtle and plays well with everything else in the bowl. Bamboo shoots aren’t always my favorite topping, but here they have been sliced so thinly that they turn out crisp and light. They make for some great textural variation. </p>
+            <p> <b>Overall, Jinya has managed to craft a bowl of ramen that is perfect for the summer!</b></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
   <script src="homeScript.js"></script>
   </body>
 
